@@ -1,0 +1,47 @@
+PATCH http://localhost:3000/notes/1649444975810/archived
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/notes/1649442024006
+Content-Type: application/json
+
+{
+  "name": "laravel update",
+  "content": "some 05.15.2020 update",
+  "categoryId": 3
+}
+
+###
+DELETE http://localhost:3000/notes/1649441112386
+Accept: application/json
+
+###
+POST http://localhost:3000/notes
+Content-Type: application/json
+
+{
+  "name": "one",
+  "content": "some 05.15.2020",
+  "categoryId": 1
+}
+
+###
+GET http://localhost:3000/notes/1649441108393
+Accept: application/json
+
+###
+GET http://localhost:3000/notes
+Accept: application/json
+
+###
+
+GET http://localhost:3000/notes/stats
+Accept: application/json
+
+###
+
+
+GET http://localhost:3000/notes/categories
+Accept: application/json
+
+###

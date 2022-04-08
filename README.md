@@ -43,6 +43,14 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+```
+### SWAGGER DOCS
+
+http://localhost:3000/api/docs/
+
+```
+
 ```
 
 ## Test
