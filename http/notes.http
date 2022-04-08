@@ -20,13 +20,13 @@ POST http://localhost:3000/notes
 Content-Type: application/json
 
 {
-  "name": "one",
+  "name": "one lolo",
   "content": "some 05.15.2020",
-  "categoryId": 1
+  "categoryId": 2
 }
 
 ###
-GET http://localhost:3000/notes/1649441108393
+GET http://localhost:3000/notes/1649447682782
 Accept: application/json
 
 ###

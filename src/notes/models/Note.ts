@@ -13,6 +13,5 @@ export class Note implements INote{
        public categoryId: number,
     ){
         this.dates = parseDate(this.content);
-        console.log(this.dates)
     }
 }
