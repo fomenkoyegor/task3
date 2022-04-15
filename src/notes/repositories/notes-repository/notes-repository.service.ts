@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import {INote} from "../../interfaces/INote";
-import {ICategory} from "../../interfaces/ICategory";
-import {Category} from "../../models/Category";
-import {Note} from "../../models/Note";
-import {BehaviorSubject} from "rxjs";
-import {NotesDto} from "../../dto/notes.dto";
-import {parseDate} from "../../helpers";
-import {ICategoryStat} from "../../interfaces/ICategoryStat";
+import { INote } from "../../interfaces/INote";
+import { ICategory } from "../../interfaces/ICategory";
+import { Category } from "../../models/Category";
+import { Note } from "../../models/Note";
+import { BehaviorSubject } from "rxjs";
+import { NotesDto } from "../../dto/notes.dto";
+import { parseDate } from "../../helpers";
+import { ICategoryStat } from "../../interfaces/ICategoryStat";
 
 export interface InitialState {
     notes: INote[],

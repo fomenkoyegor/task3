@@ -5,6 +5,6 @@ import { NotesRepositoryService } from './repositories/notes-repository/notes-re
 
 @Module({
   controllers: [NotesController],
-  providers: [NotesService, NotesRepositoryService]
+  providers: [NotesService, NotesRepositoryService],
 })
 export class NotesModule {}
