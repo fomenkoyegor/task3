@@ -13,47 +13,51 @@ import { NotesDto } from './dto/notes.dto';
 import { ICategory } from './interfaces/ICategory';
 import { ICategoryStat } from './interfaces/ICategoryStat';
 
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
 @Controller('notes')
 export class NotesController {
   constructor(private notesService: NotesService) {}
 
   @Get('/')
-  getNotes(): INote[] {
+  getNotes() {
     return this.notesService.notes();
   }
 
   @Get('/stats')
-  getCategoriesStatistics(): ICategoryStat[] {
+  getCategoriesStatistics() {
     return this.notesService.categoriesStatistic();
   }
 
   @Get('/categories')
-  getCategories(): ICategory[] {
+  getCategories() {
     return this.notesService.categories();
   }
 
   @Post('/')
-  createNote(@Body() noteDTO: NotesDto): INote {
+  createNote(@Body() noteDTO: NotesDto) {
     return this.notesService.create(noteDTO);
   }
 
   @Get('/:id')
-  getNoteById(@Param('id') id): INote {
+  getNoteById(@Param('id') id) {
     return this.notesService.note(+id);
   }
 
   @Delete('/:id')
-  deleteNoteById(@Param('id') id): INote {
+  deleteNoteById(@Param('id') id) {
     return this.notesService.remove(+id);
   }
 
   @Patch('/:id')
-  updateNote(@Param('id') id, @Body() noteDTO: NotesDto): INote {
-    return this.notesService.update(id, noteDTO);
+  updateNote(@Param('id') id, @Body() noteDTO: NotesDto) {
+    return this.notesService.update(+id, noteDTO);
   }
 
   @Patch('/:id/archived')
-  archivedNote(@Param('id') id): INote {
+  archivedNote(@Param('id') id) {
     return this.notesService.archived(+id);
   }
 }

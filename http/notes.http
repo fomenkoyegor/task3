@@ -1,18 +1,19 @@
-PATCH http://localhost:3000/notes/1649444975810/archived
+PATCH http://localhost:3000/notes/2/archived
 Content-Type: application/json
 
 ###
-PATCH http://localhost:3000/notes/1649442024006
+PATCH http://localhost:3000/notes/2
 Content-Type: application/json
 
 {
-  "name": "laravel update",
+  "title": "title update",
   "content": "some 05.15.2020 update",
-  "categoryId": 3
+  "categoryId": 3,
+  "archived": true
 }
 
 ###
-DELETE http://localhost:3000/notes/1649441112386
+DELETE http://localhost:3000/notes/1
 Accept: application/json
 
 ###
@@ -20,13 +21,13 @@ POST http://localhost:3000/notes
 Content-Type: application/json
 
 {
-  "name": "one lolo",
+  "title": "one lolo ",
   "content": "some 05.15.2020",
-  "categoryId": 2
+  "categoryId": 3
 }
 
 ###
-GET http://localhost:3000/notes/1649447682782
+GET http://localhost:3000/notes/2
 Accept: application/json
 
 ###
@@ -42,6 +43,6 @@ Accept: application/json
 
 
 GET http://localhost:3000/notes/categories
-Accept: application/json 
+Accept: application/json
 
 ###

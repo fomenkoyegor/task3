@@ -64,7 +64,7 @@ const fn = async () => {
         title: item.title,
         content: item.content,
         dates: parseDate(item.content).join(' '),
-        categoryId: randomId(),
+        categoryId: 1,
       },
     });
     console.log(note);

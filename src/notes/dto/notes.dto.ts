@@ -11,7 +11,7 @@ export class NotesDto {
   @IsDefined()
   @IsNotEmpty()
   @Length(6, 12)
-  readonly name: string;
+  readonly title: string;
 
   @IsDefined()
   @IsNotEmpty()

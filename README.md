@@ -32,6 +32,16 @@
 $ npm install
 ```
 
+```
+#docker
+sudo docker-compose up
+npx prisma generate
+npx prisma migarate dev
+node prisma/seeds.js
+npx prisma studio
+
+```
+
 ## Running the app
 
 ```bash
@@ -45,6 +55,7 @@ $ npm run start:dev
 $ npm run start:prod
 
 ```
+
 ### SWAGGER DOCS
 
 http://localhost:3000/api/docs/
