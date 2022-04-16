@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { NotesService } from './notes.service';
 import { NotesDto } from './dto/notes.dto';
+import { CategoryDto } from './dto/category.dto';
 
 @Controller('notes')
 export class NotesController {
@@ -32,6 +33,11 @@ export class NotesController {
   @Post('/')
   createNote(@Body() noteDTO: NotesDto) {
     return this.notesService.create(noteDTO);
+  }
+
+  @Post('/category')
+  createCategory(@Body() categoryDTO: CategoryDto) {
+    return this.notesService.category(categoryDTO);
   }
 
   @Get('/:id')

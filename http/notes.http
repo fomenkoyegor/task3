@@ -21,13 +21,21 @@ POST http://localhost:3000/notes
 Content-Type: application/json
 
 {
-  "title": "one lolo ",
+  "title": "react 2",
   "content": "some 05.15.2020",
-  "categoryId": 3
+  "categoryId": 2
 }
 
 ###
-GET http://localhost:3000/notes/2
+POST http://localhost:3000/notes/category
+Content-Type: application/json
+
+{
+  "name": "Random quote"
+}
+
+###
+GET http://localhost:3000/notes/3
 Accept: application/json
 
 ###

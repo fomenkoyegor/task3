@@ -3,6 +3,7 @@ import { NotesDto } from './dto/notes.dto';
 import { parseDate } from './helpers';
 import { Note } from './models/note.entity';
 import { Category } from './models/category.entity';
+import { CategoryDto } from './dto/category.dto';
 
 @Injectable()
 export class NotesService {
@@ -47,6 +48,12 @@ export class NotesService {
       content: note.content,
       categoryId: note.categoryId,
       dates: parseDate(note.content).join(' '),
+    });
+  }
+
+  public category(category: CategoryDto): Promise<Category> {
+    return this.categoryRepository.create({
+      name: category.name,
     });
   }
 
