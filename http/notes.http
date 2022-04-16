@@ -6,14 +6,14 @@ PATCH http://localhost:3000/notes/2
 Content-Type: application/json
 
 {
-  "title": "title update",
-  "content": "some 05.15.2020 update",
+  "title": "title pdate4",
+  "content": "some 05.15.2020 05/15/2020 update",
   "categoryId": 3,
   "archived": true
 }
 
 ###
-DELETE http://localhost:3000/notes/1
+DELETE http://localhost:3000/notes/19
 Accept: application/json
 
 ###

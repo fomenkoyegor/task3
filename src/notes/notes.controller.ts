@@ -8,14 +8,7 @@ import {
   Post,
 } from '@nestjs/common';
 import { NotesService } from './notes.service';
-import { INote } from './interfaces/INote';
 import { NotesDto } from './dto/notes.dto';
-import { ICategory } from './interfaces/ICategory';
-import { ICategoryStat } from './interfaces/ICategoryStat';
-
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
 
 @Controller('notes')
 export class NotesController {

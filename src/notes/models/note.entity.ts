@@ -32,4 +32,6 @@ export class Note extends Model<Note> {
   @Column content: string;
 
   @Column archived: boolean;
+
+  @Column dates: string;
 }

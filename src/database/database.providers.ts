@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
-import { Category } from 'src/notes/category.entity';
-import { Note } from 'src/notes/note.entity';
+import { Category } from '../notes/models/category.entity';
+import { Note } from '../notes/models/note.entity';
 
 export const databaseProviders = [
   {
