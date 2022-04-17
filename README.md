@@ -32,15 +32,28 @@
 $ npm install
 ```
 
-```
-#docker
+## docker
+
 sudo docker-compose up
+
+## prisma
+
 npx prisma generate
 npx prisma migarate dev
 node prisma/seeds.js
 npx prisma studio
 
-```
+## sequelize
+
+npx sequelize-cli migration:generate --name create-categories
+npx sequelize-cli seed:generate --name demo-categories
+
+npx sequelize-cli migration:generate --name create-notes
+
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
+
+````
 
 ## Running the app
 
@@ -54,7 +67,7 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 
-```
+````
 
 ### SWAGGER DOCS
 
